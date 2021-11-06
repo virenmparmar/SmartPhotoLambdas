@@ -1,15 +1,10 @@
-version: 0.2
+version: 0.1
 phases:
- install:
-  runtime-versions:
-   python: 3.8
- build: 
-  commands:
-   - sam build
-   - export BUCKET=p1-codepipeline
-   - sam package --s3-bucket $BUCKET --output-template-file outputtemplate.yml
+  install:
+    commands:
+      - aws cloudformation package --template-file samTemp.yaml --s3-bucket p1-codepipeline --output-template-file outputSamTemplate.yaml
 artifacts:
- type: zip
- files:
-  - template.yml
-  - outputtemplate.yml
+  type: zip
+  files:
+    - samTemp.yaml
+    - outputSamTemplate.yaml

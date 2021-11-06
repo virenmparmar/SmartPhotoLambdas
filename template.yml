@@ -5,7 +5,7 @@ Resources:
  SampleFunction:
   Type: AWS::Serverless::Function
   Properties:
-   Handler: Index.lambda_handler
-   Runtime: python3.7
+   Handler: index-photos.lambda_handler
+   Runtime: python3.8
    FunctionName: SamplePython
    CodeUri: ./src #Directory the source file is

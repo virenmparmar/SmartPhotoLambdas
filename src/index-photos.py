@@ -80,6 +80,7 @@ def addIndex(bucket, objectKey, labels):
 
 def lambda_handler(event, context):
     # TODO implement
+    logger.debug('entering')
     logger.error("lambda function index-photos is triggered on photo upload")
     logger.debug(event)
     
